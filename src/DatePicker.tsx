@@ -157,7 +157,8 @@ class DatePicker extends React.Component<IDatePickerProps, any> {
 
   getDefaultMaxDate() {
     if (!this.defaultMaxDate) {
-      this.defaultMaxDate = new Date(2030, 1, 1, 23, 59, 59);
+      const currentDate = new Date();
+      this.defaultMaxDate = new Date(currentDate.getFullYear(), 5, 1, 23, 59, 59);
     }
     return this.defaultMaxDate;
   }
